@@ -25,11 +25,11 @@ This Django project is an API that guesses the age of a person by their name usi
 
 2. Make POST requests to the /api/human-age endpoint with the name parameter to fetch the age and date of birth of a person.
 
-Example request:
+1. Example request:
     ```bash
     curl -X POST http://localhost:8000/api/human-age -d '{"name": "Michael"}' -H 'Content-Type: application/json'
 
-Example response:
+2. Example response:
     ```bash
     {
         "name": "Michael",

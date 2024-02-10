@@ -37,6 +37,8 @@ Example response:
         "date_of_birth": "1958-01-01"
     }
 
+    NB: Use Form in the Body instead of JSON
+
 ## Testing
 
 Run tests for the project:

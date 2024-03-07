@@ -1,11 +1,12 @@
 import requests
 from datetime import datetime
 from django.core.cache import cache
+from typing import Dict, Union
 
 
 
 
-def get_age_from_agify(name):
+def get_age_from_agify(name: str) -> Union[int, None]:
     response = requests.get(f"https://api.agify.io/?name={name}")
     if response.status_code == 200:
         data = response.json()
@@ -13,7 +14,7 @@ def get_age_from_agify(name):
     else:
         return None
 
-def get_age_and_dob(name):
+def get_age_and_dob(name: str) -> Dict[str, Union[str, int]]:
     cached_response = cache.get(name)
     if cached_response:
         return cached_response
